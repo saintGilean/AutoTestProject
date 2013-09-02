@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="LoginTest">
+    <test name="Buttons behavior tests" preserve-order="true">
+        <classes>
+            <class  name="com.selenium.seleniumTests.LoginTest"/>
+        </classes>
+    </test>
+</suite>

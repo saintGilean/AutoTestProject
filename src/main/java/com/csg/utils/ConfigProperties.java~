@@ -1,0 +1,30 @@
+package com.selenium.seleniumTests.utils;
+
+import java.io.IOException;
+import java.net.URL;
+import java.util.Properties;
+
+/**
+ * Created by IntelliJ IDEA.
+ * User: Grobov
+ * Date: 9/07/12
+ * Time: 11:04 AM
+ * To change this template use File | Settings | File Templates.
+ */
+public class ConfigProperties {
+    private static Properties PROPERTIES;
+
+    static {
+        PROPERTIES = new Properties();
+        URL props = ClassLoader.getSystemResource("config.properties");
+        try{
+            PROPERTIES.load(props.openStream());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public static String getProperty(String key) {
+        return  PROPERTIES.getProperty(key);
+    }
+}
